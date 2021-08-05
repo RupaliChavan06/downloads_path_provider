@@ -10,7 +10,7 @@ class DownloadsPathProvider {
   static Future<Directory> get downloadsDirectory async {
     final String path = await _channel.invokeMethod('getDownloadsDirectory');
     if (path == null) {
-      return null;
+      return '';
     }
     return Directory(path);
   }
